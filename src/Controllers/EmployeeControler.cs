@@ -23,6 +23,5 @@ namespace ContosoCrafts.WebSite.Controllers
             return View(model);
         }
 
-
     }
 }
