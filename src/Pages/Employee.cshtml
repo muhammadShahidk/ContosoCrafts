@@ -1,10 +1,17 @@
 ﻿@page
+@using ContosoCrafts.WebSite.Components;
+@using Microsoft.AspNetCore.Components.Web
 @model ContosoCrafts.WebSite.Pages.EmployeeModel
 @{
     ViewData["Title"] = "emp";
 }
 
 <h1>Wellcome to Employee Page</h1>
+
+
+@(await Html.RenderComponentAsync<EmpComponent>(RenderMode.ServerPrerendered))
+
+<script src="_framework/blazor.server.js"></script>
 
 <div class="w-50 m-auto mb-4">
     <div class="input-group">

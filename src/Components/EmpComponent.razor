@@ -1,6 +1,33 @@
-﻿<h3>EmpComponent</h3>
+﻿@using ContosoCrafts.WebSite.Models
+@using ContosoCrafts.WebSite.Services
+@using Microsoft.AspNetCore.Components.Web
+@inject EmployeeGetService employee
 
+
+<h5>EmpComponent</h5>
+
+<button class="btn btn-primary" @onclick="e=>RetriveData()">Click to see the effect</button>
+
+ 
+ @if (retrive ==1)
+{
+        @foreach (var item in employee.GetEmployees())
+        {
+                    <p class="border rounded m-1 w-50 m-auto mb-2 p-2"> <span>Name    </span> @item.Name</p>
+                    <p class="border rounded m-1 w-50 m-auto mb-2 p-2"> <span>Name    </span> @item.Phone</p>
+                    <p class="border rounded m-1 w-50 m-auto mb-2 p-2"> <span>Name    </span> @item.Age</p>
+                    <p class="border rounded m-1 w-50 m-auto mb-2 p-2"> <span>Name    </span> @item.Address</p>
+                    <br />
+
+        }
+    
+}
 
 @code {
+    int retrive = 0;
+    void RetriveData()
+    {
+        retrive = 1;
 
+    }
 }
