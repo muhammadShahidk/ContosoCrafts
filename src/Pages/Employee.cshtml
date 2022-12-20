@@ -1,0 +1,53 @@
+﻿@page
+@model ContosoCrafts.WebSite.Pages.EmployeeModel
+@{
+    ViewData["Title"] = "emp";
+}
+
+<h1>Wellcome to Employee Page</h1>
+
+<div class="w-50 m-auto mb-4">
+    <div class="input-group">
+      <span class="input-group-text">Name</span>
+      <input type="text" class="form-control" placeholder="Username" >
+    </div>
+    
+    <div class="input-group">
+      <span class="input-group-text">Address</span>
+      <input type="text" class="form-control" placeholder="Address" >
+    </div>
+    
+    <div class="input-group">
+      <span class="input-group-text">Phone</span>
+      <input type="text" class="form-control" placeholder="Phone" >
+     </div>
+
+
+    <div class="input-group">
+        <span class="input-group-text">Age</span>
+        <input type="date" class="form-control">
+    </div>
+
+    <button class="btn btn-primary">Save</button>
+
+
+
+</div>
+
+
+@foreach (var emp in Model.employees)
+{
+                <div class="card m-2">
+                <div class="card-body">
+                        <h5 class="card-title">@emp.Name</h5>
+                        <p>Phone @emp.Phone</p>
+                        <p>Address @emp.Address</p>
+                        <p>Age @emp.Age</p>
+                </div>
+                <div class="card-footer">
+                    <h6>Created by Shahid</h6>
+                </div>
+
+            </div>
+
+}

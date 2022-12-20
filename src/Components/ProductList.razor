@@ -112,7 +112,8 @@
         System.Console.WriteLine($"Rating received for {selectedProduct?.Id}: {rating}");
         if (selectedProductId == null)
             return;
-        ProductService.AddRating(selectedProductId, rating);
+        ProductService.
+        AddRating(selectedProductId, rating);
         SelectProduct(selectedProductId);
     }
 }
